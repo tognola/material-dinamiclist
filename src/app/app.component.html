@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col">
+     <h2>Left</h2>
+                    <mat-selection-list #left  class="wards-list">
+                      <mat-list-option  *ngFor="let elem of list1" [value]="elem" role="listitem">{{elem.name}}</mat-list-option >                     
+                    </mat-selection-list>
+  </div>
+  <div class="col-small">
+      <button mat-raised-button (click)="moveRight(left)" class="mb-3" color="primary"> >> </button>
+      <button mat-raised-button  (click)="moveLeft(right)" class="mb-3" color="warn"> << </button>
+  </div>
+  <div class="col">
+    <h2>Right</h2>
+        <mat-selection-list #right class="wards-list">
+          <mat-list-option *ngFor="let elem of list2" [value]="elem" role="listitem">{{elem.name}}</mat-list-option >                     
+        </mat-selection-list>
+  </div>
+</div>
